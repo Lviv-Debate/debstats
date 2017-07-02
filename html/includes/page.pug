@@ -1,0 +1,13 @@
+//- Template of the default page.
+
+include variables.pug
+
+doctype html
+html
+  head: title= page_name + posttitle
+  body
+    block content //- Content of the page.
+
+    block foot
+      #footer
+        p Дебатний клуб Львівської Політехніки. 2017
