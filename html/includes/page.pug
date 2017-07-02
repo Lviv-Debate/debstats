@@ -5,8 +5,9 @@ include variables.pug
 doctype html
 html
   head
-    link(href="main.css", rel="stylesheet")
-    title= page_name + posttitle
+    block head
+      link(href="main.css", rel="stylesheet")
+      title= page_name + posttitle
   body
     //- Content of the page.
     block content
