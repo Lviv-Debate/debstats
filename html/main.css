@@ -16,6 +16,10 @@ body {
     font-weight: bold;
 }
 
+#mpane_select {
+    color: white;
+}
+
 .mpane_li {
     display: inline;
     margin-left: 36px;

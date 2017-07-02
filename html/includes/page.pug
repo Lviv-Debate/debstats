@@ -13,7 +13,10 @@ html
     block panel
       ul#mpane
         mixin li(name)
-          li.mpane_li= name
+          if page_name == name
+            li.mpane_li#mpane_select= name
+          else
+            li.mpane_li= name
         +li("Основне")
         +li("Учасники")
         +li("Раунди")
