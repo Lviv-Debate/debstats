@@ -2,3 +2,8 @@ body {
     background-color: white;
     margin: 0;
 }
+
+#footer {
+    text-align: center;
+    padding: 18px 0;
+}
