@@ -9,6 +9,15 @@ html
       link(href="main.css", rel="stylesheet")
       title= page_name + posttitle
   body
+    //- Main panel.
+    block panel
+      ul#mpane
+        mixin li(name)
+          li.mpane_li= name
+        +li("Основне")
+        +li("Учасники")
+        +li("Раунди")
+
     //- Content of the page.
     block content
 
