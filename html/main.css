@@ -4,6 +4,23 @@ body {
     margin: 0;
 }
 
+#mpane {
+    background-color: black;
+
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    padding: 12px;
+
+    color: lightgray;
+    font-weight: bold;
+}
+
+.mpane_li {
+    display: inline;
+    margin-left: 36px;
+}
+
 #footer {
     font-size: 14px;
     text-align: center;
