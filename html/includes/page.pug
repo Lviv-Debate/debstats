@@ -12,14 +12,14 @@ html
     //- Main panel.
     block panel
       ul#mpane
-        mixin li(name)
+        mixin li(name, href)
           if page_name == name
             li.mpane_li#mpane_select= name
           else
-            li.mpane_li= name
+            li.mpane_li: a(href=href)= name
         +li("Основне")
-        +li("Учасники")
-        +li("Раунди")
+        +li("Учасники", "")
+        +li("Раунди", "")
 
     //- Content of the page.
     block content
