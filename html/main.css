@@ -54,7 +54,11 @@ body {
     display: inline-block;
 }
 
-.sidepane_el {
+#sidepane {
+    list-style-type: none;
+}
+
+.sidepane_li {
     font-size: 15px;
 
     border-style: none;
