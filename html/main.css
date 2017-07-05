@@ -122,6 +122,14 @@ body {
 
 }
 
+#filterPeople {
+    cursor: pointer;
+}
+
+#filterPeople:hover {
+    color: blue;
+}
+
 #filterButton {
     width: 100%;
     font-size: 1em;
