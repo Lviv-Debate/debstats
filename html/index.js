@@ -6,7 +6,6 @@ $(document).ready(function() {
 })
 
 function toggleFilterDateDropdown() {
-    console.log(filterDateDropdown);
     switch (filterDateDropdown.style.display) {
         case "none":
             filterDateDropdown.style.display = "block";
