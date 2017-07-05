@@ -54,13 +54,15 @@ body {
     display: inline-block;
     list-style-type: none;
     margin-left: 20px;
-    padding-left: 0;
+    padding: 4px 10px;
     margin-top: 0;
 
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
     border-color: lightgray;
+
+    background-color: #FCFCFC;
 }
 
 /* Side Panel <li> element */
@@ -76,13 +78,13 @@ body {
     font-weight: normal;
 
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 /* Side Panel date filer layer */
 .splidate {
     display: inline-block;
-    padding: 4px 0;
+    padding: 8px 0;
 }
 
 .splidate > input {
@@ -96,23 +98,47 @@ body {
     padding-left: 2px;
 }
 
-.splidate > h2 {
-    font-size: 1.1em;
+.splidiv h2 {
+    font-size: 1em;
     font-weight: normal;
 
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 
     vertical-align: middle;
 }
 
-.spli > a {
+.splidiv {
+    margin-left: 16px;
+}
+
+.splidiv a {
     font-style: oblique;
     font-size: 0.9em;
     text-decoration: underline;
 
     color: darkblue;
 
+}
+
+#filterButton {
+    display: inline;
+    width: 100%;
+    font-size: 1.1em;
+
+    border: solid;
+    border-width: 1px;
+    border-color: gray;
+    border-radius: 3px;
+
+    background-color: #FDFDFD;
+
+    padding: 2px 0;
+}
+
+input#filterButton:hover {
+    border-color: black;
+    background-color: white;
 }
 
 #footer {
