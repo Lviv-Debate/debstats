@@ -4,6 +4,9 @@ body {
     margin: 0;
 }
 
+main {
+}
+
 #mpane {
     background-color: #f3f3f3;
 
@@ -51,6 +54,7 @@ body {
 
 #sidepane {
     width: 200px;
+    float: left;
 
     display: inline-block;
     list-style-type: none;
@@ -152,6 +156,11 @@ input#filterButton:hover {
 }
 
 footer {
+    /* This moves footer to the bottom of the page even if
+     * other elements are floating too. */
+    width: 100%;
+    float: left;
+
     font-size: 14px;
     text-align: center;
     padding: 18px 0;
