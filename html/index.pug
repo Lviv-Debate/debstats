@@ -4,5 +4,18 @@ block prepend head
   - var page_name = "Основне"
 
 block sidepane
+  ul#sidepane
+    li.spli
+      h1 Дати
+      .splidate
+        h2 Від:&nbsp;
+        input(type="date")#filterDateFrom
+      br
+      .splidate
+        h2 До:&nbsp;
+        input(type="date")#filterDateTo
+    li.spli
+      h1 Учасники
+      a(onclick="showPeopleList()") Всі учасники (32)
 
 block maincont
