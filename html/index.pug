@@ -2,6 +2,8 @@ extends includes/statpage.pug
 
 block prepend head
   - var page_name = "Основне"
+
+block append head
   script(src="index.js")
 
 block sidepane
@@ -11,7 +13,7 @@ block sidepane
         h1.dropdownbtn(onclick="toggleFilterDateDropdown()") Дати
           svg(width="8" height="8" style="margin-left:8px;vertical-align:middle")
             polygon(points="0,0 4,8 8,0" style="fill:black")
-        ul(style="list-style-type:none;").dropdownul
+        ul(style="list-style-type:none;").dropdownul#filterDateDropdown
           li.dropdownli За весь час
           li.dropdownli За рік
           li.dropdownli За місяць
