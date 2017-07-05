@@ -7,8 +7,7 @@ body {
 #mpane {
     background-color: #f3f3f3;
 
-    margin-top: 0;
-    margin-bottom: 18px;
+    margin: 0;
 
     padding: 12px;
 
@@ -53,11 +52,11 @@ body {
 #sidepane {
     display: inline-block;
     list-style-type: none;
-    margin-left: 20px;
-    padding: 4px 10px;
-    margin-top: 0;
 
-    border-radius: 5px;
+    margin-left: 0;
+    margin-top: 32px;
+    padding: 4px 10px;
+
     border-style: solid;
     border-width: 1px;
     border-color: lightgray;
