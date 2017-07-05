@@ -50,6 +50,8 @@ body {
 }
 
 #sidepane {
+    width: 200px;
+
     display: inline-block;
     list-style-type: none;
 
