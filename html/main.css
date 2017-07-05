@@ -126,6 +126,8 @@ body {
     width: 100%;
     font-size: 1em;
 
+    cursor: pointer;
+
     border: solid;
     border-width: 1px;
     border-color: gray;
