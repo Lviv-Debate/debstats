@@ -6,9 +6,18 @@ block prepend head
 block sidepane
   ul#sidepane
     li.spli
-      h1 Дати
-        svg(width="8" height="8" style="margin-left:8px;vertical-align:middle")
-          polygon(points="0,0 4,8 8,0" style="fill:black")
+      .dropdown
+        h1.dropdownbtn(onclick="toggleFilterDateDropdown()") Дати
+          svg(width="8" height="8" style="margin-left:8px;vertical-align:middle")
+            polygon(points="0,0 4,8 8,0" style="fill:black")
+        ul(style="list-style-type:none;").dropdownul
+          li.dropdownli За весь час
+          li.dropdownli За рік
+          li.dropdownli За місяць
+          li.dropdownli За тиждень
+          li.dropdownli З початку тижня
+          li.dropdownli Вчора
+          li.dropdownli Сьогодні
       .splidiv
         .splidate
           h2 Від:&nbsp;
