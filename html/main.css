@@ -11,6 +11,7 @@ main {
     background-color: #f3f3f3;
 
     margin: 0;
+    margin-bottom: 18px;
 
     padding: 12px;
 
@@ -60,7 +61,6 @@ main {
     list-style-type: none;
 
     margin-left: 0;
-    margin-top: 32px;
     padding: 4px 10px;
 
     border-style: solid;
@@ -155,11 +155,51 @@ input#filterButton:hover {
     background-color: white;
 }
 
+/* The list that contain block info-tables in main content section. */
+.listblock {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.listblockli {
+    width: 300px;
+    position: relative;
+
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.listblocklidata {
+    position: absolute;
+    left: 25%;
+    width: 70%;
+    background-color: red;
+
+    margin: 0;
+
+    padding: 8px;
+
+    border-left-style: solid;
+    border-color: gray;
+    border-width: 2px;
+}
+
+.listblocklival {
+    position: absolute;
+
+    top: 50%;
+    width: 20%;
+    height: 100%;
+
+    background-color: gray;
+    text-align: center;
+
+    padding: 8px;
+}
+
 footer {
-    /* This moves footer to the bottom of the page even if
-     * other elements are floating too. */
-    width: 100%;
-    float: left;
+    clear: both;
 
     font-size: 14px;
     text-align: center;
