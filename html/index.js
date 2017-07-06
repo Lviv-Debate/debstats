@@ -14,13 +14,10 @@ $(document).ready(function() {
 });
 
 function toggleFilterDateDropdown() {
-    switch (filterDateDropdown.style.display) {
-        case "none":
-            filterDateDropdown.style.display = "block";
-            break;
-        default:
-            filterDateDropdown.style.display = "none";
-    }
+    filterDateDropdown.style.display =
+            filterDateDropdown.style.display == "none"
+            ? "block"
+            : "none";
 }
 
 /**
