@@ -11,6 +11,18 @@ var mpane = {
 };
 
 /**
+ * DIV that covers all the page with z-index = 1.
+ */
+var doccover = {
+    // Element reference
+    el: undefined,
+
+    // Function to call on click. After function run, this function
+    // is reset to empty function and DIV gets hidden.
+    onclick: function() {}
+};
+
+/**
  * Initialize controller.
  */
 mpane.init = function() {
@@ -43,4 +55,32 @@ mpane.trySetUserElem = function(name, page) {
     } else {
         return this.setUserElem(name, page);
     }
+};
+
+/**
+ * Initialize controller.
+ */
+doccover.init = function() {
+    this.el = $("#doccover")[0];
+
+    this.el.onclick = function() {
+        this.onclick();
+        this.onclick = function() {};
+
+        this.hide();
+    }
+};
+
+/**
+ * Cover the page with DIV.
+ */
+doccover.hide = function() {
+    this.el.display = "none";
+};
+
+/**
+ * Hide the cover so that elements of the page began available again.
+ */
+doccover.show = function() {
+    this.el.display = "block";
 };
