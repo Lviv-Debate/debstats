@@ -28,7 +28,7 @@ function toggleFilterDateDropdown() {
  * 'year'   - from the day year ago.
  * 'mon'    - month ago.
  * 'week'   - 7 days ago.
- * 'wstr'   - from the beginning of current week. Week starts on Mondays.
+ * 'wsrt'   - from the beginning of current week. Week starts on Mondays.
  * 'yes'    - yesterday only.
  * 'tod'    - today only.
  */
@@ -57,7 +57,7 @@ function filterDate(fn) {
             setDateTo("today");
             break;
 
-        case "wstr":
+        case "wsrt":
             setDateFrom("monday");
             setDateTo("today");
             break;
@@ -122,8 +122,8 @@ function setDate(obj, d, m, y) {
                 break;
 
             case "monday":
-                var day = date.getDay();
-                day = day == 0 ? 6 : day;
+                var day = date.getDay() - 1;
+                day = day == -1 ? 6 : day;
                 date.setDate(date.getDate() - day);
                 break;
 
