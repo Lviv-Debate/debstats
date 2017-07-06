@@ -105,7 +105,7 @@ function setDate(obj, d, m, y) {
     if (m === undefined) {
         switch (d) {
             case "today":
-                // Nothing to change.
+                date = new Date();
                 break;
 
             case "yearago":
