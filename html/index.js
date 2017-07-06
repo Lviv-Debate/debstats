@@ -1,17 +1,34 @@
 var filterDateDropdown;
 var filterDateFrom;
 var filterDateTo;
+var filterPeople;
+var serverData;
 
 $(document).ready(function() {
     filterDateDropdown  = $("#filterDateDropdown")  [0];
     filterDateFrom      = $("#filterDateFrom")      [0];
     filterDateTo        = $("#filterDateTo")        [0];
+    filterPeople        = $('#filterPeople')        [0];
+
+    serverData = getServerData();
 
     filterDateDropdown.style.display = "none";
 
     // Set initial values to date filters.
     filterDate("all");
+
+    setFilterPeople("Всі учасники", serverData.peopleCount);
 });
+
+/**
+ * Retrieve dynamic page data from the server.
+ */
+function getServerData() {
+    // TODO
+    return {
+        peopleCount     : 32,
+    };
+}
 
 function toggleFilterDateDropdown() {
     filterDateDropdown.style.display =
@@ -163,4 +180,11 @@ function setDateFrom(d, m, y) {
 
 function setDateTo(d, m, y) {
     return setDate(filterDateTo, d, m, y);
+}
+
+/**
+ * Set description to the people filter element and people count.
+ */
+function setFilterPeople(desc, count) {
+    filterPeople.innerHTML = desc + ' (' + count + ')';
 }
