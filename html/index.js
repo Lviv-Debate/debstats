@@ -40,14 +40,18 @@ function getServerData() {
  */
 function toggleFilterDateDropdown() {
     if (filterDateDropdown.style.display == "none") {
-        filterDateDropdown.style.display = "block";
-
-        doccover.activate(function() {
-            toggleFilterDateDropdown();
-        });
+        showFilterDateDropdown();
     } else {
         hideFilterDateDropdown();
     }
+}
+
+function showFilterDateDropdown() {
+    filterDateDropdown.style.display = "block";
+
+    doccover.activate(function() {
+        toggleFilterDateDropdown();
+    });
 }
 
 function hideFilterDateDropdown() {
