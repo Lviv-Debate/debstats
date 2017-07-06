@@ -34,6 +34,11 @@ function getServerData() {
     };
 }
 
+/**
+ * Show/hide date dropdown menu.
+ *
+ * Called from HTML.
+ */
 function toggleFilterDateDropdown() {
     filterDateDropdown.style.display =
             filterDateDropdown.style.display == "none"
@@ -52,6 +57,8 @@ function toggleFilterDateDropdown() {
  * 'wsrt'   - from the beginning of current week. Week starts on Mondays.
  * 'yes'    - yesterday only.
  * 'tod'    - today only.
+ *
+ * Called from HTML.
  */
 function filterDate(fn) {
     // Hide the dropdown from which this function was called.
