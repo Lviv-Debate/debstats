@@ -1,3 +1,4 @@
+var doccover;
 var filterDateDropdown;
 var filterDateFrom;
 var filterDateTo;
@@ -5,6 +6,7 @@ var filterPeople;
 var serverData;
 
 $(document).ready(function() {
+    doccover            = $("#doccover")            [0];
     filterDateDropdown  = $("#filterDateDropdown")  [0];
     filterDateFrom      = $("#filterDateFrom")      [0];
     filterDateTo        = $("#filterDateTo")        [0];
@@ -40,10 +42,17 @@ function getServerData() {
  * Called from HTML.
  */
 function toggleFilterDateDropdown() {
-    filterDateDropdown.style.display =
-            filterDateDropdown.style.display == "none"
-            ? "block"
-            : "none";
+    if (filterDateDropdown.style.display == "none") {
+        filterDateDropdown.style.display = "block";
+        doccover.style.display = "block";
+        doccover.onclick = function() {
+            toggleFilterDateDropdown();
+        };
+    } else {
+        filterDateDropdown.style.display = "none";
+        doccover.style.display = "none";
+        doccover.onclick = undefined;
+    }
 }
 
 /**
