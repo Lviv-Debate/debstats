@@ -3,11 +3,11 @@ var filterDateFrom;
 var filterDateTo;
 
 $(document).ready(function() {
-    filterDateDropdown = $("#filterDateDropdown")[0];
-    filterDateDropdown.style.display = "none";
+    filterDateDropdown  = $("#filterDateDropdown")  [0];
+    filterDateFrom      = $("#filterDateFrom")      [0];
+    filterDateTo        = $("#filterDateTo")        [0];
 
-    filterDateFrom  = $("#filterDateFrom")  [0];
-    filterDateTo    = $("#filterDateTo")    [0];
+    filterDateDropdown.style.display = "none";
 
     // Set initial values to date filters.
     filterDate("all");
