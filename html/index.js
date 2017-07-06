@@ -99,7 +99,7 @@ function filterDate(fn) {
 function setDate(obj, d, m, y) {
     var date = new Date();
 
-    if (m == "undefined") {
+    if (m === undefined) {
         switch (d) {
             case "today":
                 // Nothing to change.
@@ -143,7 +143,6 @@ function setDate(obj, d, m, y) {
         date = new Date(Date.UTC(y, m - 1, d));
     }
 
-    console.log(date);
     obj.value = date.yyyymmdd();
 }
 
