@@ -8,6 +8,9 @@ $(document).ready(function() {
 
     filterDateFrom  = $("#filterDateFrom")  [0];
     filterDateTo    = $("#filterDateTo")    [0];
+
+    // Set initial values to date filters.
+    filterDate("all");
 })
 
 function toggleFilterDateDropdown() {
