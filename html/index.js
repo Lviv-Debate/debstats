@@ -93,56 +93,63 @@ function filterDate(fn) {
  * * "yesterday"    - set to yesterday.
  * * "monday"       - set to last monday.
  *
- * @param w Set to given week.
+ * @param m Set to given month.
  * @param y Set to given year.
  */
-function setDate(obj, d, w, y) {
-    if (w == "undefined") {
-        var today = new Date();
+function setDate(obj, d, m, y) {
+    var date = Date.now();
 
+    if (m == "undefined") {
         switch (d) {
             case "today":
-                console.log("Not supported yet!");
+                // Nothing to change.
                 break;
 
             case "yearago":
-                console.log("Not supported yet!");
+                date.setFullYear(date.getFullYear() - 1);
                 break;
 
             case "monthago":
-                console.log("Not supported yet!");
+                date.setMonth(date.getMonth() - 1);
                 break;
 
             case "weekago":
-                console.log("Not supported yet!");
+                date.setDate(date.getDate() - 7);
                 break;
 
             case "yesterday":
-                console.log("Not supported yet!");
+                date.setDate(date.getDate() - 1);
                 break;
 
             case "monday":
-                console.log("Not supported yet!");
+                var day = date.getDay();
+                day = day == 0 ? 6 : day;
+                date.setDate(date.getDate() - day);
                 break;
 
             default:
                 console.log({
                     msg : "Argument error",
                     d   : d,
-                    w   : w,
+                    m   : m,
                     y   : y
                 });
                 return;
         }
+    } else {
+        // Create Date instance with given values.
+        // Note that month count from 0 in Date implementation whereas
+        // 'm' argument counts from 1.
+        date = Date.UTC(y, m - 1, d);
     }
 
-    obj.value = d + "-" + w + "-" + y;
+    obj.value = date.toLocaleDateString();
 }
 
-function setDateFrom(d, w, y) {
-    return setDate(filterDateFrom, d, w, y);
+function setDateFrom(d, m, y) {
+    return setDate(filterDateFrom, d, m, y);
 }
 
-function setDateTo(d, w, y) {
-    return setDate(filterDateTo, d, w, y);
+function setDateTo(d, m, y) {
+    return setDate(filterDateTo, d, m, y);
 }
