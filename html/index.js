@@ -97,7 +97,7 @@ function filterDate(fn) {
  * @param y Set to given year.
  */
 function setDate(obj, d, m, y) {
-    var date = Date.now();
+    var date = new Date();
 
     if (m == "undefined") {
         switch (d) {
@@ -140,11 +140,23 @@ function setDate(obj, d, m, y) {
         // Create Date instance with given values.
         // Note that month count from 0 in Date implementation whereas
         // 'm' argument counts from 1.
-        date = Date.UTC(y, m - 1, d);
+        date = new Date(Date.UTC(y, m - 1, d));
     }
 
-    obj.value = date.toLocaleDateString();
+    console.log(date);
+    obj.value = date.yyyymmdd();
 }
+
+Date.prototype.yyyymmdd = function() {
+    var mm = this.getMonth() + 1; // getMonth() is zero-based
+    var dd = this.getDate();
+
+    return [
+            this.getFullYear(),
+            (mm > 9 ? '' : '0') + mm,
+            (dd > 9 ? '' : '0') + dd
+    ].join('-');
+};
 
 function setDateFrom(d, m, y) {
     return setDate(filterDateFrom, d, m, y);
