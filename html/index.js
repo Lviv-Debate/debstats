@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     // Set initial values to date filters.
     filterDate("all");
-})
+});
 
 function toggleFilterDateDropdown() {
     switch (filterDateDropdown.style.display) {
