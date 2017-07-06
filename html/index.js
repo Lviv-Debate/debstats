@@ -64,7 +64,7 @@ function filterDate(fn) {
 
         case "yes":
             setDateFrom("yesterday");
-            setDateTo("today");
+            setDateTo("yesterday");
             break;
 
         case "tod":
