@@ -14,13 +14,13 @@ block sidepane
           svg(width="8" height="8" style="margin-left:8px;vertical-align:middle")
             polygon(points="0,0 4,8 8,0" style="fill:black")
         ul(style="list-style-type:none;").dropdownul#filterDateDropdown
-          li.dropdownli За весь час
-          li.dropdownli За рік
-          li.dropdownli За місяць
-          li.dropdownli За тиждень
-          li.dropdownli З початку тижня
-          li.dropdownli Вчора
-          li.dropdownli Сьогодні
+          li.dropdownli(onclick="filterDate('all')")  За весь час
+          li.dropdownli(onclick="filterDate('year')") За рік
+          li.dropdownli(onclick="filterDate('mon')")  За місяць
+          li.dropdownli(onclick="filterDate('week')") За тиждень
+          li.dropdownli(onclick="filterDate('wsrt')") З початку тижня
+          li.dropdownli(onclick="filterDate('yes')")  Вчора
+          li.dropdownli(onclick="filterDate('tod')")  Сьогодні
       .splidiv
         .splidate
           h2 Від:&nbsp;
