@@ -1,4 +1,3 @@
-var doccover;
 var filterDateDropdown;
 var filterDateFrom;
 var filterDateTo;
@@ -6,13 +5,13 @@ var filterPeople;
 var serverData;
 
 $(document).ready(function() {
-    doccover            = $("#doccover")            [0];
     filterDateDropdown  = $("#filterDateDropdown")  [0];
     filterDateFrom      = $("#filterDateFrom")      [0];
     filterDateTo        = $("#filterDateTo")        [0];
     filterPeople        = $('#filterPeople')        [0];
 
-    mpane.init();
+    mpane       .init();
+    doccover    .init();
 
     serverData = getServerData();
 
@@ -38,21 +37,22 @@ function getServerData() {
 
 /**
  * Show/hide date dropdown menu.
- *
- * Called from HTML.
  */
 function toggleFilterDateDropdown() {
     if (filterDateDropdown.style.display == "none") {
         filterDateDropdown.style.display = "block";
-        doccover.style.display = "block";
-        doccover.onclick = function() {
+
+        doccover.activate(function() {
             toggleFilterDateDropdown();
-        };
+        });
     } else {
-        filterDateDropdown.style.display = "none";
-        doccover.style.display = "none";
-        doccover.onclick = undefined;
+        hideFilterDateDropdown();
     }
+}
+
+function hideFilterDateDropdown() {
+    filterDateDropdown.style.display = "none";
+    doccover.reset();
 }
 
 /**
@@ -71,7 +71,7 @@ function toggleFilterDateDropdown() {
  */
 function filterDate(fn) {
     // Hide the dropdown from which this function was called.
-    filterDateDropdown.style.display = "none";
+    hideFilterDateDropdown();
 
     switch(fn) {
         case "all":

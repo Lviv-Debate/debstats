@@ -18,8 +18,8 @@ var doccover = {
     el: undefined,
 
     // Function to call on click. After function run, this function
-    // is reset to empty function and DIV gets hidden.
-    onclick: function() {}
+    // is reset to empty function.
+    onceclick: function() {}
 };
 
 /**
@@ -64,23 +64,37 @@ doccover.init = function() {
     this.el = $("#doccover")[0];
 
     this.el.onclick = function() {
-        this.onclick();
-        this.onclick = function() {};
-
-        this.hide();
-    }
+        doccover.onceclick();
+        doccover.onceclick = function() {};
+    };
 };
 
 /**
  * Cover the page with DIV.
  */
 doccover.hide = function() {
-    this.el.display = "none";
+    this.el.style.display = "none";
 };
 
 /**
  * Hide the cover so that elements of the page began available again.
  */
 doccover.show = function() {
-    this.el.display = "block";
+    this.el.style.display = "block";
+};
+
+/**
+ * Hide the layer and reset 'onceclick' event handler.
+ */
+doccover.reset = function() {
+    this.hide();
+    this.onceclick = function() {};
+};
+
+/**
+ * Show the layer and set 'onceclick' event handler.
+ */
+doccover.activate = function(once) {
+    this.onceclick = once;
+    this.show();
 };
