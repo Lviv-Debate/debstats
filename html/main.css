@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
 body {
     font-family: sans-serif;
     background-color: white;
@@ -194,40 +196,40 @@ input#filterButton:hover {
 }
 
 .listblockli {
-    width: 300px;
     position: relative;
-
-    border-style: solid;
-    border-color: gray;
-    border-width: 1px;
+    left: 72px;
 }
 
 .listblocklidata {
-    position: absolute;
-    left: 25%;
-    width: 70%;
-    background-color: red;
-
     margin: 0;
-
-    padding: 8px;
+    padding: 16px 8px;
+    padding-left: 28px;
 
     border-left-style: solid;
-    border-color: gray;
     border-width: 2px;
+    border-color: skyblue;
+}
+
+.listblocklidata > h1 {
+    margin: 0;
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
 }
 
 .listblocklival {
+    display: block;
+    width: 72px;
+
     position: absolute;
-
     top: 50%;
-    width: 20%;
-    height: 100%;
+    margin-top: -0.7em;
+    left: -90px;
 
-    background-color: gray;
-    text-align: center;
+    text-align: right;
 
-    padding: 8px;
+    font-size: 36px;
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
 }
 
 footer {
