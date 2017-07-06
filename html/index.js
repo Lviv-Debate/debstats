@@ -3,12 +3,14 @@ var filterDateFrom;
 var filterDateTo;
 var filterPeople;
 var serverData;
+var mpaneuser;
 
 $(document).ready(function() {
     filterDateDropdown  = $("#filterDateDropdown")  [0];
     filterDateFrom      = $("#filterDateFrom")      [0];
     filterDateTo        = $("#filterDateTo")        [0];
     filterPeople        = $('#filterPeople')        [0];
+    mpaneuser           = $('#mpane_user')          [0];
 
     serverData = getServerData();
 
@@ -18,6 +20,7 @@ $(document).ready(function() {
     filterDate("all");
 
     setFilterPeople("Всі учасники", serverData.peopleCount);
+    setUsername(serverData.username);
 });
 
 /**
@@ -27,6 +30,7 @@ function getServerData() {
     // TODO
     return {
         peopleCount     : 32,
+        username        : undefined,
     };
 }
 
@@ -187,4 +191,14 @@ function setDateTo(d, m, y) {
  */
 function setFilterPeople(desc, count) {
     filterPeople.innerHTML = desc + ' (' + count + ')';
+}
+
+/**
+ * Set username on main panel. If undefined, login text will be showed instead.
+ *
+ * @param name User name to display. May be undefined.
+ * @param page Link to user page. Abscent if 'name' is undefined.
+ */
+function setUsername(name, page) {
+    // TODO
 }
