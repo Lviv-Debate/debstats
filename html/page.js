@@ -19,7 +19,13 @@ var doccover = {
 
     // Function to call on click. After function run, this function
     // is reset to empty function.
-    onceclick: function() {}
+    onceclick: function() {},
+
+    init        : function() {},
+    show        : function() {},
+    hide        : function() {},
+    activate    : function() {},
+    reset       : function() {}
 };
 
 /**
