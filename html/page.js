@@ -76,14 +76,14 @@ doccover.init = function() {
 };
 
 /**
- * Cover the page with DIV.
+ * Hide the cover so that elements of the page began available again.
  */
 doccover.hide = function() {
     this.el.style.display = "none";
 };
 
 /**
- * Hide the cover so that elements of the page began available again.
+ * Cover the page with DIV.
  */
 doccover.show = function() {
     this.el.style.display = "block";
