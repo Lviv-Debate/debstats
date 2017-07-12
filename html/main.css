@@ -239,3 +239,35 @@ footer {
     text-align: center;
     padding: 18px 0;
 }
+
+/* Page navigation list when content is split in multiple pages.
+ * Like in google search.
+ */
+.pagenav {
+    display: inline;
+    list-style-type: none;
+
+    padding: 0;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 6px;
+}
+
+.pagenavli {
+    display: inline;
+
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+
+    font-size: 15px;
+}
+
+.pagenavli a {
+    text-decoration: none;
+}
+
+.pagenavli a:hover {
+    text-decoration: underline;
+}
