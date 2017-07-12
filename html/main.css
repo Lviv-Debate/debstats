@@ -244,7 +244,7 @@ footer {
  * Like in google search.
  */
 .pagenav {
-    display: inline;
+    display: inline-block;
     list-style-type: none;
 
     padding: 2px 4px;
