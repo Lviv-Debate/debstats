@@ -7,6 +7,11 @@ $(document).ready(function() {
 });
 
 /**
+ * How many entries to show on a single page.
+ */
+const ENTRIES_PER_PAGE = 10;
+
+/**
  * A content controller.
  */
 var content = {
