@@ -163,7 +163,7 @@ filterpane.setDateTo = function(d, m, y) {
  * Set description to the people filter element and people count.
  */
 filterpane.setFilterPeople = function(desc, count) {
-    filterPeople.innerHTML = desc + ' (' + count + ')';
+    this.people.innerHTML = desc + ' (' + count + ')';
 };
 
 /**
@@ -182,7 +182,7 @@ filterpane.setFilterPeople = function(desc, count) {
  */
 filterpane.filterDate = function(fn) {
     // Hide the dropdown from which this function may be called.
-    filterpane.hideDateDropdown();
+    this.hideDateDropdown();
 
     switch(fn) {
         case "all":
