@@ -2,6 +2,9 @@ extends page.pug
 
 //- A page with side panel containing statistic filters.
 
+block append head
+  script(src="statpage.js")
+
 block content
   main
     //- Side panel
@@ -12,13 +15,13 @@ block content
             svg(width="8" height="8" style="margin-left:8px;vertical-align:middle")
               polygon(points="0,0 4,8 8,0" style="fill:black")
           ul(style="list-style-type:none;").dropdownul#filterDateDropdown
-            li.dropdownli(onclick="filterDate('all')")  За весь час
-            li.dropdownli(onclick="filterDate('year')") За рік
-            li.dropdownli(onclick="filterDate('mon')")  За місяць
-            li.dropdownli(onclick="filterDate('week')") За тиждень
-            li.dropdownli(onclick="filterDate('wsrt')") З початку тижня
-            li.dropdownli(onclick="filterDate('yes')")  Вчора
-            li.dropdownli(onclick="filterDate('tod')")  Сьогодні
+            li.dropdownli(onclick="filterpane.filterDate('all')")  За весь час
+            li.dropdownli(onclick="filterpane.filterDate('year')") За рік
+            li.dropdownli(onclick="filterpane.filterDate('mon')")  За місяць
+            li.dropdownli(onclick="filterpane.filterDate('week')") За тиждень
+            li.dropdownli(onclick="filterpane.filterDate('wsrt')") З початку тижня
+            li.dropdownli(onclick="filterpane.filterDate('yes')")  Вчора
+            li.dropdownli(onclick="filterpane.filterDate('tod')")  Сьогодні
         .splidiv
           .splidate
             h2 Від:&nbsp;
