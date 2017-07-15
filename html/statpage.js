@@ -182,7 +182,7 @@ filterpane.setFilterPeople = function(desc, count) {
  */
 filterpane.filterDate = function(fn) {
     // Hide the dropdown from which this function may be called.
-    hideFilterDateDropdown();
+    filterpane.hideDateDropdown();
 
     switch(fn) {
         case "all":
