@@ -1,9 +1,9 @@
 var serverData;
 
 $(document).ready(function() {
-    filterpane  .init();
     mpane       .init();
     doccover    .init();
+    filterpane  .init();
 
     serverData = getServerData();
 
