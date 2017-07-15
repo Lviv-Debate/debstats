@@ -1,6 +1,37 @@
 extends page.pug
 
+//- A page with side panel containing statistic filters.
+
 block content
   main
-    block sidepane
+    //- Side panel
+    ul#sidepane
+      li.spli
+        .dropdown
+          h1.dropdownbtn(onclick="toggleFilterDateDropdown()") Дати
+            svg(width="8" height="8" style="margin-left:8px;vertical-align:middle")
+              polygon(points="0,0 4,8 8,0" style="fill:black")
+          ul(style="list-style-type:none;").dropdownul#filterDateDropdown
+            li.dropdownli(onclick="filterDate('all')")  За весь час
+            li.dropdownli(onclick="filterDate('year')") За рік
+            li.dropdownli(onclick="filterDate('mon')")  За місяць
+            li.dropdownli(onclick="filterDate('week')") За тиждень
+            li.dropdownli(onclick="filterDate('wsrt')") З початку тижня
+            li.dropdownli(onclick="filterDate('yes')")  Вчора
+            li.dropdownli(onclick="filterDate('tod')")  Сьогодні
+        .splidiv
+          .splidate
+            h2 Від:&nbsp;
+            input(type="date")#filterDateFrom
+          br
+          .splidate
+            h2 До:&nbsp;
+            input(type="date")#filterDateTo
+      li.spli
+        h1 Учасники
+        .splidiv
+          a(onclick="showPeopleList()")#filterPeople Всі учасники (32)
+      li.spli
+        input(type="button" onclick="filterApply()" value="Показати")#filterButton
+    //- Main content
     block maincont
