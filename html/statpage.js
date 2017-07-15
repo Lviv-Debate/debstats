@@ -59,7 +59,7 @@ filterpane.showDateDropdown = function() {
 
     // Hide dropdown when it looses it's focus.
     doccover.activate(function() {
-        hideDateDropdown();
+        filterpane.hideDateDropdown();
     });
 };
 
