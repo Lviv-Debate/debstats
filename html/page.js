@@ -3,22 +3,34 @@
  */
 
 /**
- * Main page controller.
+ * Main panel controller. That is a navigation panel at the top of
+ * pages.
  */
 var mpane = {
-    // User name/login element.
+
+    /**
+     * User name/login element. After initialization must be set to
+     * valid value.
+     */
     user    : undefined
 };
 
 /**
- * DIV that covers all the page with z-index = 1.
+ * DIV that covers all the page, with z-index = 1.
+ * Is used to register lost focus for pop-ups when the area of the
+ * page is clicked while pop-up is active.
  */
 var doccover = {
-    // Element reference
+
+    /**
+     * Element. Must be set to valid value after initialization function.
+     */
     el: undefined,
 
-    // Function to call on click. After function run, this function
-    // is reset to empty function.
+    /**
+     * Function is run once the layer is clicked. After that this field
+     * is reset to empty function.
+     */
     onceclick: function() {},
 
     init        : function() {},
