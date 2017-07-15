@@ -46,7 +46,7 @@ filterpane.init = function() {
     this.people         = document.getElementById("filterPeople");
 
     // Initialize date filter. Do not filter no date.
-    this.setDate("all");
+    this.filterDate("all");
 };
 
 /**
