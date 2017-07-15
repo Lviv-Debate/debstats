@@ -187,7 +187,7 @@ filterpane.filterDate = function(fn) {
     switch(fn) {
         case "all":
             setDateFrom(1, 1, 2017);
-            setDateTo("today")
+            setDateTo("today");
             break;
 
         case "year":
