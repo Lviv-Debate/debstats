@@ -3,6 +3,9 @@ extends includes/statpage.pug
 block prepend head
   - var page_name = "Раунди"
 
+block append head
+  script(src="rounds.js")
+
 
 block maincont
   #maincont(style="text-align:center;")
