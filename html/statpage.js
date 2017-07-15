@@ -165,3 +165,64 @@ filterpane.setDateTo = function(d, m, y) {
 filterpane.setFilterPeople = function(desc, count) {
     filterPeople.innerHTML = desc + ' (' + count + ')';
 };
+
+/**
+ * Set filter with specific calculated values.
+ *
+ * @param fn The function to calculate date values.
+ * 'all'    - Set the date from the beginning.
+ * 'year'   - from the day year ago.
+ * 'mon'    - month ago.
+ * 'week'   - 7 days ago.
+ * 'wsrt'   - from the beginning of current week. Week starts on Mondays.
+ * 'yes'    - yesterday only.
+ * 'tod'    - today only.
+ *
+ * Called from HTML.
+ */
+filterpane.filterDate = function(fn) {
+    // Hide the dropdown from which this function may be called.
+    hideFilterDateDropdown();
+
+    switch(fn) {
+        case "all":
+            setDateFrom(1, 1, 2017);
+            setDateTo("today")
+            break;
+
+        case "year":
+            setDateFrom("yearago");
+            setDateTo("today");
+            break;
+
+        case "mon":
+            setDateFrom("monthago");
+            setDateTo("today");
+            break;
+
+        case "week":
+            setDateFrom("weekago");
+            setDateTo("today");
+            break;
+
+        case "wsrt":
+            setDateFrom("monday");
+            setDateTo("today");
+            break;
+
+        case "yes":
+            setDateFrom("yesterday");
+            setDateTo("yesterday");
+            break;
+
+        case "tod":
+            setDateFrom("today");
+            setDateTo("today");
+            break;
+
+        default:
+            console.log("filterDate got wrong argument!");
+            console.log(fn);
+            return;
+    }
+};
