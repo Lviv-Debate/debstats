@@ -152,11 +152,11 @@ Date.prototype.yyyymmdd = function() {
 };
 
 filterpane.setDateFrom = function(d, m, y) {
-    return setDate(filterDateFrom, d, m, y);
+    return this.setDate(filterDateFrom, d, m, y);
 };
 
 filterpane.setDateTo = function(d, m, y) {
-    return setDate(filterDateTo, d, m, y);
+    return this.setDate(filterDateTo, d, m, y);
 };
 
 /**
@@ -186,38 +186,38 @@ filterpane.filterDate = function(fn) {
 
     switch(fn) {
         case "all":
-            setDateFrom(1, 1, 2017);
-            setDateTo("today");
+            this.setDateFrom(1, 1, 2017);
+            this.setDateTo("today");
             break;
 
         case "year":
-            setDateFrom("yearago");
-            setDateTo("today");
+            this.setDateFrom("yearago");
+            this.setDateTo("today");
             break;
 
         case "mon":
-            setDateFrom("monthago");
-            setDateTo("today");
+            this.setDateFrom("monthago");
+            this.setDateTo("today");
             break;
 
         case "week":
-            setDateFrom("weekago");
-            setDateTo("today");
+            this.setDateFrom("weekago");
+            this.setDateTo("today");
             break;
 
         case "wsrt":
-            setDateFrom("monday");
-            setDateTo("today");
+            this.setDateFrom("monday");
+            this.setDateTo("today");
             break;
 
         case "yes":
-            setDateFrom("yesterday");
-            setDateTo("yesterday");
+            this.setDateFrom("yesterday");
+            this.setDateTo("yesterday");
             break;
 
         case "tod":
-            setDateFrom("today");
-            setDateTo("today");
+            this.setDateFrom("today");
+            this.setDateTo("today");
             break;
 
         default:
