@@ -40,7 +40,13 @@ var filterpane = {
  * Function to initialize the structure.
  */
 filterpane.init = function() {
-    console.log("Unimplemented yet");
+    this.dateDropdown   = document.getElementById("filterDateDropdown");
+    this.dateFrom       = document.getElementById("filterDateFrom");
+    this.dateTo         = document.getElementById("filterDateTo");
+    this.people         = document.getElementById("filterPeople");
+
+    // Initialize date filter. Do not filter no date.
+    this.setDate("all");
 };
 
 /**
