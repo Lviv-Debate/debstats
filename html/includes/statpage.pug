@@ -11,7 +11,7 @@ block content
     ul#sidepane
       li.spli
         .dropdown
-          h1.dropdownbtn(onclick="toggleFilterDateDropdown()") Дати
+          h1.dropdownbtn(onclick="filterpane.showDateDropdown()") Дати
             svg(width="8" height="8" style="margin-left:8px;vertical-align:middle")
               polygon(points="0,0 4,8 8,0" style="fill:black")
           ul(style="list-style-type:none;").dropdownul#filterDateDropdown
@@ -33,8 +33,8 @@ block content
       li.spli
         h1 Учасники
         .splidiv
-          a(onclick="showPeopleList()")#filterPeople Всі учасники (32)
+          a(onclick="filterpane.showPeopleList()")#filterPeople Всі учасники (32)
       li.spli
-        input(type="button" onclick="filterApply()" value="Показати")#filterButton
+        input(type="button" onclick="filterpane.filterApply()" value="Показати")#filterButton
     //- Main content
     block maincont
