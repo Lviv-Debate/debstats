@@ -25,7 +25,17 @@ var content = {
          * The DIV with actual content.
          */
         div: undefined,
+
+        /**
+         * The list with actual content. Is inside the layer.
+         */
+        list: undefined,
     },
+
+    /**
+     * An array of debate rounds basic information.
+     */
+    data: undefined,
 };
 
 /**
@@ -40,13 +50,42 @@ content.init = function() {
  */
 content.roundsdivctrl.init = function() {
     this.div = document.getElementById("roundsdiv");
+
+    // Set initial state.
+    this.clean();
+};
+
+/**
+ * Append new debate round information.
+ */
+content.roundsdivctrl.append = function() {
+    this.list.innerHTML += "<li class='listblockli'>";
+    this.list.innerHTML += "<span class='listblocklidateday'>";
+    this.list.innerHTML += "24"; // TODO
+    this.list.innerHTML += "</span>";
+    this.list.innerHTML += "<span class='listblocklidatemon'>";
+    this.list.innerHTML += "07/17"; // TODO
+    this.list.innerHTML += "</span>";
+    this.list.innerHTML += "<div class='listblocklidata>'";
+    this.list.innerHTML += "<p>";
+    this.list.innerHTML += "Якийсь опис дебатного раунду"; // TODO
+    this.list.innerHTML += "</p></div></li>";
+};
+
+/**
+ * Delete all the displayed rounds from the layer leaving empty round list.
+ */
+content.roundsdivctrl.clean = function() {
+    // Create list with information.
+    this.div.innerHTML = "<ul id='roundsdivul' class='listblock'></ul>"
+    this.list = document.getElementById("roundsdivul");
 };
 
 /**
  * Set the data about debate rounds.
  */
 content.setData = function(data) {
-    // TODO
+    this.data = data;
 };
 
 /**
@@ -54,6 +93,16 @@ content.setData = function(data) {
  * page will be shown.
  */
 content.showPage = function(pagenum) {
+    var data = this.pageData(pagenum);
+    for (var i = 0; i < ENTRIES_PER_PAGE; i++) {
+        // TODO
+    }
+};
+
+/**
+ * Return individual page data. The array of entries to be shown.
+ */
+content.pageData = function(pagenum) {
     // TODO
 };
 
@@ -61,5 +110,9 @@ content.showPage = function(pagenum) {
  * Get amount of individual pages that can be shown.
  */
 content.pageCount = function() {
-    // TODO
+    if (data === undefined) {
+        return 0;
+    } else {
+        return data.length() / ENTRIES_PER_PAGE;
+    }
 };
