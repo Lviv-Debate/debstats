@@ -67,7 +67,7 @@ content.roundsdivctrl.append = function() {
     html += "<span class='listblocklidatemon'>";
     html += "07/17"; // TODO
     html += "</span>";
-    html += "<div class='listblocklidata>'";
+    html += "<div class='listblocklidata'>";
     html += "<p>";
     html += "Якийсь опис дебатного раунду"; // TODO
     html += "</p></div></li>";
