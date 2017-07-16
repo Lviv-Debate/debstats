@@ -4,7 +4,12 @@ $(document).ready(function() {
     filterpane  .init();
 
     content     .init();
-    content.roundsdivctrl.append();
+    content.roundsdivctrl.append({
+        day: 24,
+        month: 7,
+        year: 2017,
+        resolution: "ЦПВЩ стакан наполовину пустий"
+    });
 });
 
 /**
@@ -59,18 +64,37 @@ content.roundsdivctrl.init = function() {
 /**
  * Append new debate round information.
  */
-content.roundsdivctrl.append = function() {
+content.roundsdivctrl.append = function(entry) {
+    // Get day string.
+    var daystr;
+    if (Math.floor(entry.day / 10) == 0) {
+        daystr = "0" + entry.day;
+    } else {
+        daystr = "" + entry.day;
+    }
+
+    // Get month str.
+    var monstr;
+    if (Math.floor(entry.month / 10) == 0) {
+        monstr = "0" + entry.month;
+    } else {
+        monstr = "" + entry.month;
+    }
+
+    // Get year string.
+    var yearstr = "" + (entry.year % 100);
+
     var html = "";
     html += "<li class='listblockli'>";
     html += "<span class='listblocklidateday'>";
-    html += "24"; // TODO
+    html += daystr;
     html += "</span>";
     html += "<span class='listblocklidatemon'>";
-    html += "07/17"; // TODO
+    html += monstr + "/" + yearstr;
     html += "</span>";
     html += "<div class='listblocklidata'>";
     html += "<p>";
-    html += "ЦПВЩ стакан наполовину пустий"; // TODO
+    html += entry.resolution;
     html += "</p></div></li>";
 
     this.list.innerHTML += html;
