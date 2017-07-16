@@ -59,17 +59,20 @@ content.roundsdivctrl.init = function() {
  * Append new debate round information.
  */
 content.roundsdivctrl.append = function() {
-    this.list.innerHTML += "<li class='listblockli'>";
-    this.list.innerHTML += "<span class='listblocklidateday'>";
-    this.list.innerHTML += "24"; // TODO
-    this.list.innerHTML += "</span>";
-    this.list.innerHTML += "<span class='listblocklidatemon'>";
-    this.list.innerHTML += "07/17"; // TODO
-    this.list.innerHTML += "</span>";
-    this.list.innerHTML += "<div class='listblocklidata>'";
-    this.list.innerHTML += "<p>";
-    this.list.innerHTML += "Якийсь опис дебатного раунду"; // TODO
-    this.list.innerHTML += "</p></div></li>";
+    var html = "";
+    html += "<li class='listblockli'>";
+    html += "<span class='listblocklidateday'>";
+    html += "24"; // TODO
+    html += "</span>";
+    html += "<span class='listblocklidatemon'>";
+    html += "07/17"; // TODO
+    html += "</span>";
+    html += "<div class='listblocklidata>'";
+    html += "<p>";
+    html += "Якийсь опис дебатного раунду"; // TODO
+    html += "</p></div></li>";
+
+    this.list.innerHTML += html;
 };
 
 /**
