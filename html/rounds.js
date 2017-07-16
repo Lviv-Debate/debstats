@@ -4,6 +4,7 @@ $(document).ready(function() {
     filterpane  .init();
 
     content     .init();
+    content.roundsdivctrl.append();
 });
 
 /**
@@ -69,7 +70,7 @@ content.roundsdivctrl.append = function() {
     html += "</span>";
     html += "<div class='listblocklidata'>";
     html += "<p>";
-    html += "Якийсь опис дебатного раунду"; // TODO
+    html += "ЦПВЩ стакан наполовину пустий"; // TODO
     html += "</p></div></li>";
 
     this.list.innerHTML += html;
