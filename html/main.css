@@ -232,6 +232,38 @@ input#filterButton:hover {
     font-weight: 300;
 }
 
+.listblocklidateday {
+    display: block;
+    width: 72px;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -0.9em;
+    left: -90px;
+
+    text-align: right;
+
+    font-size: 36px;
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
+}
+
+.listblocklidatemon {
+    display: block;
+    width: 72px;
+
+    position: absolute;
+    top: 50%;
+    margin-top: 1em;
+    left: -90px;
+
+    text-align: right;
+
+    font-size: 15px;
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
+}
+
 footer {
     clear: both;
 
@@ -270,4 +302,9 @@ footer {
 
 .pagenavli a:hover {
     text-decoration: underline;
+}
+
+#roundsdiv {
+    display: block;
+    text-align: left;
 }
