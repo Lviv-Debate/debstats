@@ -4,12 +4,24 @@ $(document).ready(function() {
     filterpane  .init();
 
     content     .init();
-    content.roundsdivctrl.append({
+
+    content.setData([{
         day: 24,
         month: 7,
         year: 2017,
         resolution: "ЦПВЩ стакан наполовину пустий"
-    });
+    },{
+        day: 24,
+        month: 7,
+        year: 2017,
+        resolution: "ЦПВЩ стакан наполовину пустий"
+    },{
+        day: 24,
+        month: 7,
+        year: 2017,
+        resolution: "ЦПВЩ стакан наполовину пустий"
+    }]);
+    content.showPage(0);
 });
 
 /**
@@ -122,8 +134,8 @@ content.setData = function(data) {
  */
 content.showPage = function(pagenum) {
     var data = this.pageData(pagenum);
-    for (var i = 0; i < ENTRIES_PER_PAGE; i++) {
-        // TODO
+    for (var i = 0; i < data.length; i++) {
+        this.roundsdivctrl.append(data[i]);
     }
 };
 
@@ -132,6 +144,7 @@ content.showPage = function(pagenum) {
  */
 content.pageData = function(pagenum) {
     // TODO
+    return this.data;
 };
 
 /**
