@@ -143,8 +143,24 @@ content.showPage = function(pagenum) {
  * Return individual page data. The array of entries to be shown.
  */
 content.pageData = function(pagenum) {
-    // TODO
-    return this.data;
+    var index = pagenum * ENTRIES_PER_PAGE;
+    if (this.data.length <= index) {
+        console.log("Requested data with index above array limit");
+        return [];
+    }
+
+    var arr = [];
+    while (arr.length < ENTRIES_PER_PAGE) {
+        arr.push(this.data[index]);
+        index++;
+
+        if (this.data.length == index) {
+            // No more data in array and page has less entries.
+            break;
+        }
+    }
+
+    return arr;
 };
 
 /**
