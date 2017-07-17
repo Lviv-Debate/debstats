@@ -287,11 +287,11 @@ pagenavctrl.setActiveIndex = function(i) {
 };
 
 /**
- * Link the callback to the index in the bar. When this number
- * is clicked, the callback will be executed.
- * If given index is not present in the bar, function does nothing.
+ * Set the callback function to call when the new page activation was
+ * requested. Callback receives one argument which is an index of the page
+ * that was requested.
  */
-pagenavctrl.setCallback = function(index, callback) {
+pagenavctrl.setCallback = function(callback) {
     // TODO
 };
 
