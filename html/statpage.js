@@ -306,7 +306,17 @@ pagenavctrl.getStartIndex = function() {
  * Active page index and total page count must be set.
  */
 pagenavctrl.getEndIndex = function() {
-    // TODO
+    if (this.activePage == 0 || this.pageCount == 0) {
+        return 0;
+    }
+
+    var center = Math.floor(PAGE_NAV_ENTRIES_MAX / 2);
+
+    if (this.activePage + center <= this.pageCount) {
+        return this.activePage + center;
+    } else {
+        return this.pageCount;
+    }
 };
 
 /**
