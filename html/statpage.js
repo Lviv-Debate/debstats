@@ -339,5 +339,9 @@ pagenavctrl.setCallback = function(callback) {
  * Delete all the content from the bar.
  */
 pagenavctrl.reset = function() {
+    this.callback   = function(index) {};
+    this.activePage = 0;
+    this.pageCount  = 0;
+
     // TODO
 };
