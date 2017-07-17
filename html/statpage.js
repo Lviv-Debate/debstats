@@ -47,14 +47,14 @@ const PAGE_NAV_ENTRIES_MAX = 10;
 var pagenavctrl = {
 
     /**
-     * Bottom div that contains navigation bar.
+     * Bottom list that contains navigation bar.
      */
-    bottomdiv: undefined,
+    bottoml: undefined,
 
     /**
-     * Top div that contains navigation bar.
+     * Top list that contains navigation bar.
      */
-    topdiv: undefined,
+    topl: undefined,
 
     /**
      * Total page count.
@@ -267,8 +267,8 @@ filterpane.filterDate = function(fn) {
  * Function to initialize page navigation bar controller.
  */
 pagenavctrl.init = function() {
-    this.bottomdiv = document.getElementById("pagenavbottom");
-    this.topdov    = document.getElementById("pagenavtop");
+    this.bottoml = document.getElementById("pagenavbottom");
+    this.topl    = document.getElementById("pagenavtop");
 };
 
 /**
@@ -320,10 +320,52 @@ pagenavctrl.getEndIndex = function() {
 };
 
 /**
+ * Get total amount of indices rendered in the bar.
+ */
+pagenavctrl.getRenderedIndexCount = function() {
+    return this.getEndIndex() - this.getStartIndex() + 1;
+};
+
+/**
  * Set the current active page index.
  */
 pagenavctrl.setActiveIndex = function(i) {
     this.activePage = i;
+};
+
+/**
+ * Get current active page index.
+ */
+pagenavctrl.getActiveIndex = function() {
+    return this.activePage;
+};
+
+/**
+ * Turn to previous page. If this is a first page, do nothing.
+ */
+pagenavctrl.navigatePrev = function() {
+    // TODO
+};
+
+/**
+ * Navigate to next page. If this is a last page, do nothing.
+ */
+pagenavctrl.navigateNext = function() {
+    // TODO
+};
+
+/**
+ * Navigate to first page. If this is a first page, do nothing.
+ */
+pagenavctrl.navigateFirst = function() {
+    // TODO
+};
+
+/**
+ * Navigate to last page. If this is a last page, do nothing.
+ */
+pagenavctrl.navigateLast = function() {
+    // TODO
 };
 
 /**
@@ -344,4 +386,48 @@ pagenavctrl.reset = function() {
     this.pageCount  = 0;
 
     // TODO
+};
+
+/**
+ * Render page indices according to set data: page amount, current page.
+ */
+pagenavctrl.render = function() {
+    var html = "";
+
+    html += "<li class='pagenavli'>"
+    html += "<span onclick='pagenavctrl.navigateFirst()'>";
+    html += "«";
+    html += "</span>";
+    html += "</li>";
+
+    html += "<li class='pagenavli'>"
+    html += "<span onclick='pagenavctrl.navigatePrev()'>";
+    html += "&lt"; // <
+    html += "</span>";
+    html += "</li>";
+
+    for (var i = 0; i < this.getRenderedIndexCount(); i++) {
+        var index = i + this.getStartIndex();
+
+        html += "<li class='pagenavli'>"
+        html += "<span onclick='pagenavctrl.setActiveIndex(" + index + ")'>";
+        html += index;
+        html += "</span>";
+        html += "</li>";
+    }
+
+    html += "<li class='pagenavli'>"
+    html += "<span onclick='pagenavctrl.navigateNext()'>";
+    html += "&gt"; // >
+    html += "</span>";
+    html += "</li>";
+
+    html += "<li class='pagenavli'>"
+    html += "<span onclick='pagenavctrl.navigateLast()'>";
+    html += "»";
+    html += "</span>";
+    html += "</li>";
+
+    this.bottoml    .innerHTML = html;
+    this.topl       .innerHTML = html;
 };
