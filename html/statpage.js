@@ -344,15 +344,41 @@ pagenavctrl.getActiveIndex = function() {
  * Turn to previous page. If this is a first page, do nothing.
  */
 pagenavctrl.navigatePrev = function() {
-    // TODO
+    if (this.activePage == 1) {
+        return;
+    }
+
+    this.navigateIndex(this.activePage - 1);
 };
+
 
 /**
  * Navigate to next page. If this is a last page, do nothing.
  */
 pagenavctrl.navigateNext = function() {
-    // TODO
+    if (this.activePage == this.getEndIndex()) {
+        return;
+    }
+
+    this.navigateIndex(this.activePage + 1);
 };
+
+/**
+ * Navigate to page with given index. This function updates
+ * controller's active page index. Then callback is executed. Callback
+ * may change the index if it wants to. Then render is ran automatically.
+ */
+pagenavctrl.navigateIndex = function(index) {
+    if (index < 1 || index > this.pageCount) {
+        console.log("Invalid index: " + index + " for page count "
+                + this.pageCount);
+        return;
+    }
+
+    this.setActiveIndex(index);
+    this.callback(index);
+    this.render();
+}
 
 /**
  * Navigate to first page. If this is a first page, do nothing.
