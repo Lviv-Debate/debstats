@@ -358,14 +358,14 @@ pagenavctrl.navigateNext = function() {
  * Navigate to first page. If this is a first page, do nothing.
  */
 pagenavctrl.navigateFirst = function() {
-    // TODO
+    this.setActiveIndex(1);
 };
 
 /**
  * Navigate to last page. If this is a last page, do nothing.
  */
 pagenavctrl.navigateLast = function() {
-    // TODO
+    this.setActiveIndex(this.pageCount());
 };
 
 /**
