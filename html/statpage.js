@@ -257,10 +257,25 @@ pagenavctrl.init = function() {
 };
 
 /**
- * Set the index of the first page. The last displayed index is defined by
- * the constant PAGE_NAV_ENTRIES_MAX in this script file.
+ * Set the total amount of pages.
  */
-pagenavctrl.setStartIndex = function(i) {
+pagenavctrl.setPageCount = function(count) {
+    // TODO
+};
+
+/**
+ * Get the first displayed index. Return 0 if controller has not enough data.
+ * Active page index and total page count must be set.
+ */
+pagenavctrl.getStartIndex = function() {
+    // TODO
+};
+
+/**
+ * Get the last displayed index. Return 0 if controller has not enough data.
+ * Active page index and total page count must be set.
+ */
+pagenavctrl.getEndIndex = function() {
     // TODO
 };
 
