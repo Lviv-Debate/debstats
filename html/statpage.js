@@ -384,14 +384,14 @@ pagenavctrl.navigateIndex = function(index) {
  * Navigate to first page. If this is a first page, do nothing.
  */
 pagenavctrl.navigateFirst = function() {
-    this.setActiveIndex(1);
+    this.navigateIndex(1);
 };
 
 /**
  * Navigate to last page. If this is a last page, do nothing.
  */
 pagenavctrl.navigateLast = function() {
-    this.setActiveIndex(this.pageCount());
+    this.navigateIndex(this.pageCount());
 };
 
 /**
