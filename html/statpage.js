@@ -265,6 +265,13 @@ pagenavctrl.setStartIndex = function(i) {
 };
 
 /**
+ * Set the current active page index.
+ */
+pagenavctrl.setActiveIndex = function(i) {
+    // TODO
+};
+
+/**
  * Link the callback to the index in the bar. When this number
  * is clicked, the callback will be executed.
  * If given index is not present in the bar, function does nothing.
