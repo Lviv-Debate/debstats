@@ -60,6 +60,11 @@ var pagenavctrl = {
      * Total page count.
      */
     pageCount: 0,
+
+    /**
+     * Active page index. Starts from 1. 0 means no active page.
+     */
+    activePage: 0,
 };
 
 /**
@@ -288,7 +293,7 @@ pagenavctrl.getEndIndex = function() {
  * Set the current active page index.
  */
 pagenavctrl.setActiveIndex = function(i) {
-    // TODO
+    this.activePage = i;
 };
 
 /**
