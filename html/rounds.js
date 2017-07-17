@@ -2,7 +2,6 @@ $(document).ready(function() {
     mpane       .init();
     doccover    .init();
     filterpane  .init();
-    pagenavctrl .init();
 
     content     .init();
 
@@ -62,6 +61,7 @@ var content = {
  */
 content.init = function() {
     this.roundsdivctrl.init();
+    pagenavctrl.init();
 };
 
 /**
