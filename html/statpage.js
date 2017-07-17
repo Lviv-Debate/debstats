@@ -255,3 +255,25 @@ pagenavctrl.init = function() {
     this.bottomdiv = document.getElementById("pagenavbottom");
     this.topdov    = document.getElementById("pagenavtop");
 };
+
+/**
+ * Set the index of the first page.
+ */
+pagenavctrl.setStartIndex = function(i) {
+    // TODO
+};
+
+/**
+ * Create a link to a page with given index.
+ * If this index is not present in the bar, nothing will happen.
+ */
+pagenavctrl.setLink = function(index, link) {
+    // TODO
+};
+
+/**
+ * Delete all the content from the bar.
+ */
+pagenavctrl.reset = function() {
+    // TODO
+};
