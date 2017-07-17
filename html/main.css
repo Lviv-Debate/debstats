@@ -63,6 +63,7 @@ main {
     list-style-type: none;
 
     margin-left: 0;
+    margin-right: 64px;
     padding: 4px 10px;
 
     border-style: solid;
@@ -307,4 +308,25 @@ footer {
 #roundsdiv {
     display: block;
     text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid lightgray;
+}
+
+thead {
+    background-color: #F0F0FC;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+tbody > tr:hover {
+    background-color: #F5F5FE;
 }
