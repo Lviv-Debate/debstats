@@ -257,7 +257,8 @@ pagenavctrl.init = function() {
 };
 
 /**
- * Set the index of the first page.
+ * Set the index of the first page. The last displayed index is defined by
+ * the constant PAGE_NAV_ENTRIES_MAX in this script file.
  */
 pagenavctrl.setStartIndex = function(i) {
     // TODO
