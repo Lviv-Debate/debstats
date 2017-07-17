@@ -283,7 +283,22 @@ pagenavctrl.setPageCount = function(count) {
  * Active page index and total page count must be set.
  */
 pagenavctrl.getStartIndex = function() {
-    // TODO
+    if (this.activePage == 0 || this.pageCount == 0) {
+        return 0;
+    }
+
+    var center = Math.floor(PAGE_NAV_ENTRIES_MAX / 2);
+
+    if (this.activePage <= center) {
+        // The page index cannot be displayed in the center of the bar
+        // because it is too low. The first index in the bar
+        // is 1 - it cannot be smaller to place the page index in the center.
+        return 1;
+    }
+
+    // Find out the first index that will guarantee that the page index gets
+    // displayed in the center of the bar.
+    return this.activePage - center + 1;
 };
 
 /**
