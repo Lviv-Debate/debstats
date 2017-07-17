@@ -332,3 +332,76 @@ td {
 tbody > tr:hover {
     background-color: #F5F5FE;
 }
+
+#login {
+    text-align: left;
+    display: inline-block;
+    max-width: 30%;
+
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 10px;
+    border-style: solid;
+
+    margin: 48px 0 24px 0;
+    padding: 32px;
+}
+
+#login h1 {
+    text-align: center;
+    font-size: 48px;
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
+
+    margin: 0;
+}
+
+#login h2 {
+    font-size: 28px;
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
+
+    margin-top: 24px;
+    margin-bottom: 6px;
+}
+
+#login p {
+    text-align: center;
+    color: gray;
+    margin-top: 32px;
+    font-size: 0.84em;
+}
+
+#login input {
+    height: 32px;
+    font-size: 20px;
+    width: 90%;
+
+    padding: 0 0.5em;
+
+    border-style: solid;
+    border-width: 1px;
+    border-left-color: lightgray;
+    border-bottom-color: black;
+    border-right-style: none;
+    border-top-style: none;
+
+    font-family: monospace;
+}
+
+#login button {
+    margin-top: 24px;
+    padding: 12px 24px;
+
+    border-style: none;
+    border-radius: 4px;
+
+    font-size: 18px;
+    color: white;
+    background-color: royalblue;
+}
+
+#login button:hover {
+    background-color: #4973E9;
+    cursor: pointer;
+}

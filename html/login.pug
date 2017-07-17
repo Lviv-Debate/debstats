@@ -1,0 +1,20 @@
+extends includes/page.pug
+
+block prepend head
+  - var page_name = "Вхід"
+
+block append head
+  script(src="login.js")
+
+block content
+  main(style="text-align:center;")
+    #login
+      form
+        h1 Вхід
+        h2 Нікнейм або ІД
+        input
+        h2 Пароль
+        input
+        div(style="text-align:center;")
+          button Ввійти
+      p Отримати дані для входу можна у системного адміністратора.
