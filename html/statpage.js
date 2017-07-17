@@ -65,6 +65,11 @@ var pagenavctrl = {
      * Active page index. Starts from 1. 0 means no active page.
      */
     activePage: 0,
+
+    /**
+     * The function that will be called to activate new page.
+     */
+    callback: function(index) {},
 };
 
 /**
@@ -302,7 +307,7 @@ pagenavctrl.setActiveIndex = function(i) {
  * that was requested.
  */
 pagenavctrl.setCallback = function(callback) {
-    // TODO
+    this.callback = callback;
 };
 
 /**
