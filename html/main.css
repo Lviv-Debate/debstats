@@ -194,6 +194,7 @@ input#filterButton:hover {
 .listblock {
     display: inline-block;
     list-style-type: none;
+    padding-left: 0;
 }
 
 .listblockli {
@@ -312,6 +313,7 @@ footer {
 
 table {
     border-collapse: collapse;
+    margin: 16px 0;
 }
 
 table, th, td {
