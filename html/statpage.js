@@ -55,6 +55,11 @@ var pagenavctrl = {
      * Top div that contains navigation bar.
      */
     topdiv: undefined,
+
+    /**
+     * Total page count.
+     */
+    pageCount: 0,
 };
 
 /**
@@ -260,7 +265,7 @@ pagenavctrl.init = function() {
  * Set the total amount of pages.
  */
 pagenavctrl.setPageCount = function(count) {
-    // TODO
+    this.pageCount = count;
 };
 
 /**
