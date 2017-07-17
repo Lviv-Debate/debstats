@@ -265,10 +265,11 @@ pagenavctrl.setStartIndex = function(i) {
 };
 
 /**
- * Create a link to a page with given index.
- * If this index is not present in the bar, nothing will happen.
+ * Link the callback to the index in the bar. When this number
+ * is clicked, the callback will be executed.
+ * If given index is not present in the bar, function does nothing.
  */
-pagenavctrl.setLink = function(index, link) {
+pagenavctrl.setCallback = function(index, callback) {
     // TODO
 };
 
