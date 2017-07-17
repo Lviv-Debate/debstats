@@ -1,0 +1,24 @@
+extends includes/statpage.pug
+
+block prepend head
+  - var page_name = "Учасники"
+
+block append head
+  script(src="members.js")
+
+
+block maincont
+  #maincont(style="text-align:center;")
+    ul#pagenavtop.pagenav
+      li.pagenavli: a(href="") «
+      li.pagenavli: a(href="") <
+      li.pagenavli: a(href="") 1
+      li.pagenavli: a(href="") >
+      li.pagenavli: a(href="") »
+    #roundsdiv
+    ul#pagenavbottom.pagenav
+      li.pagenavli: a(href="") «
+      li.pagenavli: a(href="") <
+      li.pagenavli: a(href="") 1
+      li.pagenavli: a(href="") >
+      li.pagenavli: a(href="") »
