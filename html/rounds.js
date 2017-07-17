@@ -2,6 +2,7 @@ $(document).ready(function() {
     mpane       .init();
     doccover    .init();
     filterpane  .init();
+    pagenavctrl .init();
 
     content     .init();
 
