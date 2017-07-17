@@ -37,6 +37,27 @@ var filterpane = {
 };
 
 /**
+ * Maximal number of entries in page navigation bar.
+ */
+const PAGE_NAV_ENTRIES_MAX = 10;
+
+/**
+ * Page navigation controller. For pages that do have page navigation bar.
+ */
+var pagenavctrl = {
+
+    /**
+     * Bottom div that contains navigation bar.
+     */
+    bottomdiv: undefined,
+
+    /**
+     * Top div that contains navigation bar.
+     */
+    topdiv: undefined,
+};
+
+/**
  * Function to initialize the structure.
  */
 filterpane.init = function() {
@@ -225,4 +246,12 @@ filterpane.filterDate = function(fn) {
             console.log(fn);
             return;
     }
+};
+
+/**
+ * Function to initialize page navigation bar controller.
+ */
+pagenavctrl.init = function() {
+    this.bottomdiv = document.getElementById("pagenavbottom");
+    this.topdov    = document.getElementById("pagenavtop");
 };
