@@ -20,7 +20,7 @@ main {
     color: black;
 }
 
-#mpane_select {
+.mpane_select {
     color: darkblue;
 
     border-bottom-style: solid;

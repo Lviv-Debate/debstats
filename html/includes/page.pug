@@ -17,7 +17,7 @@ html
       ul#mpane
         mixin li(name, href)
           if page_name == name
-            li.mpane_li#mpane_select= name
+            li.mpane_li.mpane_select= name
           else
             li.mpane_li: a(href=href)= name
         +li("Основне", "index.html")
