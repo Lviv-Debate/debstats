@@ -6,8 +6,6 @@ $(document).ready(function() {
     filterpane  .init();
 
     serverData = getServerData();
-
-    mpane.trySetUserElem(serverData.username);
 });
 
 /**
