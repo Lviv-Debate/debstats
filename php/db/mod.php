@@ -4,6 +4,22 @@
  * Class to wrap database accesses.
  */
 class Database {
+
+    private const DBNAME = "debstats";
+
+    private $conn;
+
+    function __construct() {
+        try {
+            $conn = new PDO(
+                    "mysql:host=localhost;dbname=" . DBNAME,
+                    "root",
+                    "");
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOexception $e) {
+            // TODO
+        }
+    }
 }
 
 /**
