@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class to access data from filter panel of a document.
+ */
 class FilterData {
 
     /**
