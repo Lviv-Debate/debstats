@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Class to wrap database accesses.
+ */
+class Database {
+}
+
+/**
  * Class to access data from filter panel of a document.
  */
 class FilterData {
