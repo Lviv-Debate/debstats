@@ -79,6 +79,6 @@ class FilterData {
     */
     static function stringDateToObject($date) {
         // Format: day/month/year. Time set to 00:00:00.
-        return DateTime::createFromFormat("! d/m/Y");
+        return DateTime::createFromFormat("! d/m/Y", $date);
     }
 }
