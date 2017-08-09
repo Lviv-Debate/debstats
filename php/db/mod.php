@@ -59,15 +59,8 @@ class DbPk extends Db {
 /**
  * Class to represent group of clubs.
  */
-class DbClubGroup extends Db {
+class DbClubGroup extends DbPk {
     // TODO
-
-    /**
-     * Get ID of club group. This is also a PK in DB.
-     */
-    function id() {
-        // TODO
-    }
 
     /**
      * Get club group name string.
@@ -102,15 +95,8 @@ class DbDebaterList extends Db {
 /**
  * Debater entry.
  */
-class DbDebater extends Db {
+class DbDebater extends DbPk {
     // TODO
-
-    /**
-     * Get ID of debater. This is also a PK in DB.
-     */
-    function id() {
-        // TODO
-    }
 
     /**
      * Get debater name string.
@@ -152,15 +138,8 @@ class DbDebater extends Db {
 /**
  * Club entry.
  */
-class DbClub extends Db {
+class DbClub extends DbPk {
     // TODO
-
-    /**
-     * Get id of club. This is also PK in DB.
-     */
-    function id() {
-        // TODO
-    }
 
     /**
      * Get club name string.
@@ -194,15 +173,8 @@ class DbClub extends Db {
 /**
  * Round entry.
  */
-class DbRound extends Db {
+class DbRound extends DbPk {
     // TODO
-
-    /**
-     * Get round id. This is also a PK in DB.
-     */
-    function id() {
-        // TODO
-    }
 
     /**
      * Get event date and time as DateTime instance.
