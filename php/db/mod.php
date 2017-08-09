@@ -28,6 +28,9 @@ class Database {
  */
 class FilterData {
 
+    /** Forbid creating instances of this class. */
+    private function __construct() { }
+
     /**
     * Get filter value for 'from date'.
     */
