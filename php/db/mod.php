@@ -8,7 +8,7 @@ class Database {
     private const DBNAME = "debstats";
 
     /** A PDO connection. */
-    private $conn;
+    protected $conn;
 
     function __construct() {
         try {
