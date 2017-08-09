@@ -39,6 +39,13 @@ class DbDebaterList {
 }
 
 /**
+ * Debater entry controller.
+ */
+class DbDebater {
+    // TODO
+}
+
+/**
  * Class to access data from filter panel of a document.
  */
 class FilterData {
