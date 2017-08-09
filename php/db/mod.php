@@ -30,6 +30,27 @@ class DbClubGroup {
     // TODO
 
     /**
+     * Get ID of club group. This is also a PK in DB.
+     */
+    function id() {
+        // TODO
+    }
+
+    /**
+     * Get club group name string.
+     */
+    function name() {
+        // TODO
+    }
+
+    /**
+     * Get club group description string if any.
+     */
+    function descr() {
+        // TODO
+    }
+
+    /**
      * Get list of all debaters in this club.
      */
     function debaterList() {
