@@ -47,6 +47,13 @@ class DbPk extends Db {
         parent::__construct($db);
         $this->dbpk = $dbpk;
     }
+
+    /**
+     * Get object ID (primary key).
+     */
+    function id() {
+        return $this->dbpk;
+    }
 }
 
 /**
