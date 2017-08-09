@@ -37,6 +37,19 @@ class Db {
 }
 
 /**
+ * Entry handle class that contains entry ID value (integer primary key).
+ */
+class DbPk extends Db {
+
+    protected $dbpk;
+
+    function __construct(Database $db, int $dbpk) {
+        parent::__construct($db);
+        $this->dbpk = $dbpk;
+    }
+}
+
+/**
  * Class to represent group of clubs.
  */
 class DbClubGroup extends Db {
