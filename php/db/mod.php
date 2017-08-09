@@ -24,6 +24,19 @@ class Database {
 }
 
 /**
+ * Entry of a database or other data structure that can read/modify data
+ * from database.
+ */
+class Db {
+
+    protected $db;
+
+    function __construct(Database $db) {
+        $this->db = $db;
+    }
+}
+
+/**
  * Class to represent group of clubs.
  */
 class DbClubGroup {
