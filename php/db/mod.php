@@ -50,6 +50,49 @@ class DbDebaterList {
  */
 class DbDebater {
     // TODO
+
+    /**
+     * Get ID of debater. This is also a PK in DB.
+     */
+    function id() {
+        // TODO
+    }
+
+    /**
+     * Get debater name string.
+     */
+    function name() {
+        // TODO
+    }
+
+    /**
+     * Get surname string.
+     */
+    function surname() {
+        // TODO
+    }
+
+    /**
+     * Get debater page facebook address string if any.
+     */
+    function fbpage() {
+        // TODO
+    }
+
+    /**
+     * Get email string if any.
+     */
+    function email() {
+        // TODO
+    }
+
+    /**
+     * Get phone number string if any.
+     * Format is like "+380123456789".
+     */
+    function phone() {
+        // TODO
+    }
 }
 
 /**
