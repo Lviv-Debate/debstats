@@ -39,7 +39,7 @@ class Db {
 /**
  * Class to represent group of clubs.
  */
-class DbClubGroup {
+class DbClubGroup extends Db {
     // TODO
 
     /**
@@ -75,14 +75,14 @@ class DbClubGroup {
  * List of debaters. Can be used to create a slice of statistic data for
  * just debaters listed here instead of all in the system.
  */
-class DbDebaterList {
+class DbDebaterList extends Db {
     // TODO
 }
 
 /**
  * Debater entry.
  */
-class DbDebater {
+class DbDebater extends Db {
     // TODO
 
     /**
@@ -132,7 +132,7 @@ class DbDebater {
 /**
  * Club entry.
  */
-class DbClub {
+class DbClub extends Db {
     // TODO
 
     /**
@@ -174,7 +174,7 @@ class DbClub {
 /**
  * Round entry.
  */
-class DbRound {
+class DbRound extends Db {
     // TODO
 
     /**
