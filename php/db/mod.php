@@ -28,6 +28,13 @@ class Database {
  */
 class DbClubGroup {
     // TODO
+
+    /**
+     * Get list of all debaters in this club.
+     */
+    function debaterList() {
+        // TODO
+    }
 }
 
 /**
@@ -50,6 +57,13 @@ class DbDebater {
  */
 class DbClub {
     // TODO
+
+    /**
+     * Get list of all debaters in this club.
+     */
+    function debaterList() {
+        // TODO
+    }
 }
 
 /**
