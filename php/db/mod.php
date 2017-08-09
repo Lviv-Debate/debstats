@@ -102,6 +102,34 @@ class DbClub {
     // TODO
 
     /**
+     * Get id of club. This is also PK in DB.
+     */
+    function id() {
+        // TODO
+    }
+
+    /**
+     * Get club name string.
+     */
+    function name() {
+        // TODO
+    }
+
+    /**
+     * Get club description if any.
+     */
+    function descr() {
+        // TODO
+    }
+
+    /**
+     * Get club facebook page if any.
+     */
+    function fbpage() {
+        // TODO
+    }
+
+    /**
      * Get list of all debaters in this club.
      */
     function debaterList() {
