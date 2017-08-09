@@ -39,7 +39,7 @@ class DbDebaterList {
 }
 
 /**
- * Debater entry controller.
+ * Debater entry.
  */
 class DbDebater {
     // TODO
