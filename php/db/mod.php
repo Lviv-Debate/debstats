@@ -46,6 +46,13 @@ class DbDebater {
 }
 
 /**
+ * Club entry.
+ */
+class DbClub {
+    // TODO
+}
+
+/**
  * Class to access data from filter panel of a document.
  */
 class FilterData {
