@@ -31,6 +31,14 @@ class DbClubGroup {
 }
 
 /**
+ * List of debaters. Can be used to create a slice of statistic data for
+ * just debaters listed here instead of all in the system.
+ */
+class DbDebaterList {
+    // TODO
+}
+
+/**
  * Class to access data from filter panel of a document.
  */
 class FilterData {
