@@ -159,6 +159,62 @@ class DbClub {
 }
 
 /**
+ * Round entry.
+ */
+class DbRound {
+    // TODO
+
+    /**
+     * Get round id. This is also a PK in DB.
+     */
+    function id() {
+        // TODO
+    }
+
+    /**
+     * Get event date and time as DateTime instance.
+     */
+    function datetime() {
+        // TODO
+    }
+
+    /**
+     * Get round resolution string if stored.
+     */
+    function resolution() {
+        // TODO
+    }
+
+    /**
+     * Get DbClubGroup that hosted the event.
+     */
+    function host() {
+        // TODO
+    }
+
+    /**
+     * Get seriousness level.
+     */
+    function seriousness() {
+        // TODO
+    }
+
+    /**
+     * Get DbDebater that was judging the round if any.
+     */
+    function judge() {
+        // TODO
+    }
+
+    /**
+     * Get notes string if any.
+     */
+    function notes() {
+        // TODO
+    }
+}
+
+/**
  * Class to access data from filter panel of a document.
  */
 class FilterData {
