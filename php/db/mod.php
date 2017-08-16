@@ -43,6 +43,7 @@ class Db {
  */
 class DbPk extends Db {
 
+    /** Integer value of a Primary Key. */
     protected $dbpk;
 
     function __construct(Database $db, int $dbpk) {
