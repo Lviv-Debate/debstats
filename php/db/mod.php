@@ -80,7 +80,7 @@ class DbClubGroup extends DbPk {
     }
 
     /**
-     * Get list of all debaters in this club.
+     * Get list of all debaters in this club group.
      */
     function debaterList() {
         // TODO
