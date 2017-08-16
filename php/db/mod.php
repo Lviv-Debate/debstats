@@ -5,6 +5,7 @@
  */
 class Database {
 
+    /** Database name to connect to. */
     private const DBNAME = "debstats";
 
     /** A PDO connection. */
