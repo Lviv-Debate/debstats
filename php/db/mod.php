@@ -30,6 +30,7 @@ class Database {
  */
 class Db {
 
+    /** Database that this entry is located in. */
     protected $db;
 
     function __construct(Database $db) {
