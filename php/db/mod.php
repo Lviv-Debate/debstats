@@ -85,6 +85,13 @@ class DbClubGroup extends DbPk {
     function debaterList() {
         // TODO
     }
+
+    /**
+     * Get count of all debaters in this club group.
+     */
+    function debaterCount() {
+        // TODO
+    }
 }
 
 /**
