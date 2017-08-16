@@ -226,6 +226,7 @@ class DbRound extends DbPk {
  * Class to access data from filter panel of a document.
  */
 class FilterData {
+    // TODO move to appropriate file. This class is not related to database.
 
     /** Forbid creating instances of this class. */
     private function __construct() { }
