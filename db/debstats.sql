@@ -58,9 +58,11 @@ CREATE TABLE `debaters` (
   `id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
   `surname` varchar(20) NOT NULL,
+  `club_group` int(11) DEFAULT NULL,
   `fb_page` varchar(60) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
-  `phone` varchar(30) DEFAULT NULL
+  `phone` varchar(30) DEFAULT NULL,
+  `notes` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `history` (
@@ -121,7 +123,8 @@ ALTER TABLE `club_in_group`
   ADD KEY `club_group` (`club_group`);
 
 ALTER TABLE `debaters`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `club_group` (`club_group`);
 
 ALTER TABLE `history`
   ADD PRIMARY KEY (`id`),
@@ -176,6 +179,9 @@ ALTER TABLE `britain_rounds`
 ALTER TABLE `club_in_group`
   ADD CONSTRAINT `club_in_group_ibfk_1` FOREIGN KEY (`club`) REFERENCES `clubs` (`id`),
   ADD CONSTRAINT `club_in_group_ibfk_2` FOREIGN KEY (`club_group`) REFERENCES `club_groups` (`id`);
+
+ALTER TABLE `debaters`
+  ADD CONSTRAINT `debaters_ibfk_1` FOREIGN KEY (`club_group`) REFERENCES `club_groups` (`id`);
 
 ALTER TABLE `history`
   ADD CONSTRAINT `history_ibfk_1` FOREIGN KEY (`user`) REFERENCES `user_settings` (`id`);
